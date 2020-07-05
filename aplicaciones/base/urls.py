@@ -13,7 +13,7 @@ urlpatterns = [
          {'nombre_categoria': 'entrevistas'}, name='entrevistas'),
     path('formulario_contacto/', FormularioContacto.as_view(),
          name='formulario_contacto'),
-    path('<slug:slug>/', DetallePost.as_view(),
+    path('post/<slug:slug>/', DetallePost.as_view(),
          name='detalle_post'),
     path('resultados/', Buscador.as_view(),
          name='buscar'),

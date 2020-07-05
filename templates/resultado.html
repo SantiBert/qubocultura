@@ -2,14 +2,14 @@
 {% load staticfiles %}
 {% block titulo %} Resultados de busqueda | QUBO {% endblock titulo %}
 
-{% block cuerpo %}   
+{% block cuerpo %}
     <div class="site-section">
       <div class="container">
         <div class="row">
-         {% for post in posts %}    
+         {% for post in posts %}
           <div class="col-lg-6 mb-6 mb-lg-6">
             <div class="section-heading mb-5 d-flex align-items-center">
-              <h2>{{ post.categoria.etiqueta | upper }}</h2>             
+              <h2>{{ post.categoria.etiqueta | upper }}</h2>
             <div class="entry2 mb-5">
               <a href="{% url 'base:detalle_post' post.slug %}"><img
                   src="{{ post.imagen_referencial.url }}" alt="Image" class="img-fluid rounded"></a>
@@ -24,8 +24,8 @@
               <p>{{ post.descripcion }}</p>
             </div>
           </div>
-            {% endfor %}
     </div>
     </div>
     </div>
-{% block cuerpo %}
+    {% endfor %}
+{% endblock cuerpo %}
