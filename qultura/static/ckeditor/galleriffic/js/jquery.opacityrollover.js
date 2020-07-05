@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * jQuery Opacity Rollover plugin
  *
@@ -15,6 +16,25 @@
 
 	$.fn.opacityrollover = function(settings) {
 		// Initialize the effect
+=======
+/**
+ * jQuery Opacity Rollover plugin
+ *
+ * Copyright (c) 2009 Trent Foley (http://trentacular.com)
+ * Licensed under the MIT License:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+;(function($) {
+	var defaults = {
+		mouseOutOpacity:   0.67,
+		mouseOverOpacity:  1.0,
+		fadeSpeed:         'fast',
+		exemptionSelector: '.selected'
+	};
+
+	$.fn.opacityrollover = function(settings) {
+		// Initialize the effect
+>>>>>>> faccff3d2e4aaaa3a7bf91f10e0eefe13563fa5a
 		$.extend(this, defaults, settings);
 
 		var config = this;
@@ -36,7 +56,14 @@
 				function () {
 					fadeTo(this, config.mouseOutOpacity);
 				});
+<<<<<<< HEAD
 
 		return this;
 	};
 })(jQuery);
+=======
+
+		return this;
+	};
+})(jQuery);
+>>>>>>> faccff3d2e4aaaa3a7bf91f10e0eefe13563fa5a

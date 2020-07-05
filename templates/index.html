@@ -46,7 +46,10 @@
             <h1 class="mb-0"><a href="{% url 'base:index' %}" class="text-black h2 mb-0"><img src="{% static 'images/QUBO.png'%}" alt=""></a></h1>
           </div>
           <div class="col-md-4">
+<<<<<<< HEAD
             <form action="#" method="post" class="form-footer-subscribe">
+=======
+>>>>>>> faccff3d2e4aaaa3a7bf91f10e0eefe13563fa5a
               <div class="col-6 mr-auto py-3 text-right" style="position: relative; top: 2px;">
                 <div class="social-icons d-inline">
                   <a href="{{ sociales.facebook }}" target="_blank"><span class="icon-facebook"></span></a>
@@ -246,10 +249,17 @@
           <div class="col-md-4">
             <div class="mb-5">
               <h3 class="footer-heading mb-4">Buscar</h3>
+<<<<<<< HEAD
               <form  method="GET">                
                 <div class="form-group d-flex">
                   {% csrf_token %}
                   <input type="text" class="form-control" name="buscar" value="{{request.GET.buscar}}">
+=======
+              <form method="POST" action="{%url 'base:buscar'%}">                
+                <div class="form-group d-flex">
+                  {% csrf_token %}
+                  <input type="text" class="form-control" name="buscar">
+>>>>>>> faccff3d2e4aaaa3a7bf91f10e0eefe13563fa5a
                   <button type="submit" class="btn btn-primary text-white">Buscar</button>
                 </div>
               </form>
