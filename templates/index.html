@@ -62,7 +62,7 @@
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block mb-0">
                 <li class="active"><a href="{% url 'base:index' %}">Inicio</a></li>
                 <li><a href="{% url 'base:libros' %}">Libros</a></li>
-                <li><a href="{% url 'base:pelicula' %}">Películas</a></li>
+                <li><a href="{% url 'base:pelicula' %}">Series y Películas</a></li>
                 <li><a href="{% url 'base:musica' %}">Música</a></li>
                 <li><a href="{% url 'base:entrevistas' %}">Entrevistas</a></li>
                 <li><a href="{% url 'base:formulario_contacto' %}">Contacto</a></li>
@@ -97,7 +97,7 @@
 
  <div class="site-section">
       <div class="container">
-        <div class="row">          
+        <div class="row">
           <div class="col-lg-6 mb-6 mb-lg-6">
             <div class="section-heading mb-5 d-flex align-items-center">
               <h2>{{ post_libros.categoria.etiqueta | upper }}</h2>
@@ -245,7 +245,7 @@
           <div class="col-md-4">
             <div class="mb-5">
               <h3 class="footer-heading mb-4">Buscar</h3>
-              <form method="POST" action="{%url 'base:buscar'%}">                
+              <form method="POST" action="{%url 'base:buscar'%}">
                 <div class="form-group d-flex">
                   {% csrf_token %}
                   <input type="text" class="form-control" name="buscar">
