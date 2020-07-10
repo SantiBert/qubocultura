@@ -2,7 +2,11 @@ from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['qubo.pythonanywhere.com','www.qubocultura.com','qubocultura.com']
+=======
+ALLOWED_HOSTS = ['qubo.pythonanywhere.com','www.qubocultura.com']
+>>>>>>> faccff3d2e4aaaa3a7bf91f10e0eefe13563fa5a
 
 
 DATABASES = {

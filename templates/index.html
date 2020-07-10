@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="icon" href="{% static 'images/qubito.ico'%}">
+
   <script data-ad-client="ca-pub-6458315497594649" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
   <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
@@ -246,6 +247,7 @@
             <div class="mb-5">
               <h3 class="footer-heading mb-4">Buscar</h3>
               <form method="POST" action="{%url 'base:buscar'%}">
+
                 <div class="form-group d-flex">
                   {% csrf_token %}
                   <input type="text" class="form-control" name="buscar">
