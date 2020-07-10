@@ -83,11 +83,7 @@ class Post(ModeloBase):
     class Meta:
         verbose_name = 'Post'
         verbose_name_plural = 'Posts'
-<<<<<<< HEAD
         ordering = ['-fecha_publicacion']
-=======
-        ordering = ['-fecha_de_creacion']
->>>>>>> faccff3d2e4aaaa3a7bf91f10e0eefe13563fa5a
 
     def __str__(self):
         return self.titulo

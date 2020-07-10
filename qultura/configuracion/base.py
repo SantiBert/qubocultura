@@ -66,12 +66,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'qultura.urls'
 
-#
+# Qultura/
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['Qultura/templates'],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -145,16 +145,6 @@ class DetallePost(DetailView):
 
 class Buscador(View):
     def post(self, request, *args, **kwargs):
-<<<<<<< HEAD
-        queryset = request.GET.get("buscar")
-        if queryset:
-            posts = Post.objects.filter(
-                Q(titulo__incontains=queryset) |
-                Q(contenido__incontains=queryset),
-                estado=True,
-                publicado=True
-            ).distinc()
-=======
         queryset = request.POST.get("buscar")
         if queryset:
             posts = Post.objects.filter(
@@ -163,6 +153,5 @@ class Buscador(View):
                 estado=True,
                 publicado=True
             ).distinct()
->>>>>>> faccff3d2e4aaaa3a7bf91f10e0eefe13563fa5a
 
         return render(request, 'resultado.html', {'posts': posts})
