@@ -16,10 +16,11 @@ class Inicio(ListView):
             estado=True,
             publicado=True
         ).values_list('id', flat=True))
-
-        principal = random.choice(posts)
-        posts.remove(principal)
-        principal = consulta(principal)
+        destacados = Post.objects.filter(
+            estado=True,
+            publicado=True,
+            destacado=True
+        )
 
         # Ramdamizador de post por categoria
         post1 = random.choice(posts)
@@ -69,7 +70,7 @@ class Inicio(ListView):
             post_entrevistas = None
 
         contexto = {
-            'principal': principal,
+            'destacados': destacados,
             'post1': consulta(post1),
             'post2': consulta(post2),
             'post3': consulta(post3),

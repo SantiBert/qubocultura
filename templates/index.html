@@ -7,8 +7,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="icon" href="{% static 'images/qubito.ico'%}">
-  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
+  <link rel="icon" href="{% static 'images/qubito.ico'%}">  
+  <script data-ad-client="ca-pub-6458315497594649" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
   <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -74,25 +74,27 @@
 
     {% block cuerpo %}
      <div class="slide-one-item home-slider owl-carousel">
+     {% for destacado in destacados%}
       <div class="site-cover site-cover-sm same-height overlay"
-        style="background-image: url({{ principal.imagen_referencial.url }});">
+        style="background-image: url({{ destacado.imagen_referencial.url }});">
         <div class="container">
           <div class="row same-height align-items-center">
             <div class="col-md-12 col-lg-6">
               <div class="post-entry">
-                <span class="post-category text-white bg-success mb-3">{{ principal.categoria | upper }}</span>
-                <h2 class="mb-4"><a href="{% url 'base:detalle_post' principal.slug %}">{{ principal.titulo }}</a></h2>
+                <span class="post-category text-white bg-success mb-3">{{ destacado.categoria | upper }}</span>
+                <h2 class="mb-4"><a href="{% url 'base:detalle_post' destacado.slug %}">{{ destacado.titulo }}</a></h2>
                 <div class="post-meta align-items-center text-left">
                   <figure class="author-figure mb-0 mr-3 float-left"><img
-                      src="{{ principal.autor.imagen_referencial.url }}" alt="Image" class="img-fluid"></figure>
-                  <span class="d-inline-block mt-1">Autor: {{ principal.autor }}</span>
-                  <span>{{ principal.fecha_publicacion }}</span>
+                      src="{{ destacado.autor.imagen_referencial.url }}" alt="Image" class="img-fluid"></figure>
+                  <span class="d-inline-block mt-1">Autor: {{ destacado.autor }}</span>
+                  <span>{{ destacado.fecha_publicacion }}</span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div>         
+      </div>     
+      {% endfor %}
     </div>
 
  <div class="site-section">
