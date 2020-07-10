@@ -155,3 +155,5 @@ class Buscador(View):
             ).distinct()
 
         return render(request, 'resultado.html', {'posts': posts})
+
+
